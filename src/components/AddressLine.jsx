@@ -28,6 +28,7 @@ export const AddressLine = ({ formDispatch }) => {
                 <input type="text" 
                     className="form-control" 
                     id="addrLine1Id" 
+                    data-testid="addrLine1Id"
                     value={ addressLine1 }
                     onChange={ handleChange }
                     placeholder="Ex: Block 9, Sector 36A" 
@@ -42,6 +43,7 @@ export const AddressLine = ({ formDispatch }) => {
                 <input type="text" 
                     className="form-control" 
                     id="addrLine2Id" 
+                    data-testid="addrLine2Id"
                     value={ addressLine2 }
                     onChange={ handleChange }
                     placeholder="Ex: Near Peripheral Road" />

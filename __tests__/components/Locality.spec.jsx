@@ -5,6 +5,26 @@ import {
 
 import { Locality } from "../../src/components/Locality";
 
+jest.mock("emp_employee/context", () => ({
+    useFormContext: jest.fn().mockReturnValue({
+        address: {
+            aptSuite: "mockSuite",
+            society: "mockSociety",
+            city: "mockCity" 
+        } 
+    })
+}), {
+    virtual: true 
+});
+
+jest.mock("emp_employee/actions", () => ({
+    aptSuiteAction: jest.fn(),
+    societyAction: jest.fn(),
+    cityAction: jest.fn() 
+}), {
+    virtual: true 
+});
+
 describe("Locality", () => {
     it("should render as expected", () => {
         render(<Locality formDispatch={ jest.fn() }/>);

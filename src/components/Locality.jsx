@@ -33,6 +33,7 @@ export const Locality = ({ formDispatch }) => {
                 <input type="text" 
                     className="form-control" 
                     id="aptSuiteId" 
+                    data-testid="aptSuiteId"
                     value={ aptSuite }
                     onChange={ handleChange }
                     aria-required={ true }
@@ -46,6 +47,7 @@ export const Locality = ({ formDispatch }) => {
                 <input type="text" 
                     className="form-control" 
                     id="societyId"
+                    data-testid="societyId"
                     value={ society }
                     onChange={ handleChange }
                     placeholder="Ex: AVL36" 
@@ -60,6 +62,7 @@ export const Locality = ({ formDispatch }) => {
                 <input type="text" 
                     className="form-control" 
                     id="cityId" 
+                    data-testid="cityId"
                     value={ city }
                     onChange={ handleChange }
                     aria-required={ true }

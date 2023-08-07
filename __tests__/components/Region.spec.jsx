@@ -11,7 +11,17 @@ jest.mock("emp_employee/context", () => ({
             zipCode: "mockZip" 
         } 
     })
-}));
+}), {
+    virtual: true 
+});
+
+jest.mock("emp_employee/actions", () => ({
+    stateAction: jest.fn(),
+    countryAction: jest.fn(),
+    zipCodeAction: jest.fn() 
+}), {
+    virtual: true 
+});
 
 import { Region } from "../../src/components/Region";
 
