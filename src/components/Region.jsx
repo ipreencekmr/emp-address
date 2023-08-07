@@ -1,13 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types";
-import { useFormContext } from "../context/formContext";
+import { useFormContext } from "emp_employee/context";
 import {
     stateAction, countryAction, zipCodeAction 
-} from "../actions/formAction";
+} from "emp_employee/actions";
 
 export const Region = ({ formDispatch }) => {
 
-    const { state, country, zipCode } = useFormContext();
+    const { address: { state, country, zipCode } } = useFormContext();
 
     const handleChange = (e) => {
         let action;

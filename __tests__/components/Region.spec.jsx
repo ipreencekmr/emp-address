@@ -3,6 +3,16 @@ import {
     fireEvent, render, screen 
 } from "@testing-library/react";
 
+jest.mock("emp_employee/context", () => ({
+    useFormContext: jest.fn().mockReturnValue({
+        address: {
+            state: "mockState",
+            country: "mockCountry",
+            zipCode: "mockZip" 
+        } 
+    })
+}));
+
 import { Region } from "../../src/components/Region";
 
 describe("Region", () => {

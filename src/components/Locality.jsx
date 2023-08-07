@@ -1,13 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types";
-import { useFormContext } from "../context/formContext";
+import { useFormContext } from "emp_employee/context";
 import {
     aptSuiteAction, societyAction, cityAction 
-} from "../actions/formAction";
+} from "emp_employee/actions";
 
 export const Locality = ({ formDispatch }) => {
 
-    const { aptSuite, society, city } = useFormContext();
+    const { address: { aptSuite, society, city } } = useFormContext();
 
     const handleChange = (e) => {
         let action;

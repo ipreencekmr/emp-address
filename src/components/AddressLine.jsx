@@ -1,11 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types";
-import { useFormContext } from "../context/formContext";
-import { addressLine1Action, addressLine2Action } from "../actions/formAction";
+import { useFormContext } from "emp_employee/context";
+import { addressLine1Action, addressLine2Action } from "emp_employee/actions";
 
 export const AddressLine = ({ formDispatch }) => {
 
-    const { addressLine1, addressLine2 } = useFormContext();
+    const { address: { addressLine1, addressLine2 } } = useFormContext();
 
     const handleChange = (e) => {
         let action;
